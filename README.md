@@ -6,10 +6,10 @@ Portfolio project for [VaragaHaghoubians](https://github.com/VaragaHaghoubians).
 
 A beginner-friendly Python portfolio project simulating a small steel fabrication plant with **Pressing →
 Spot Welding → Machining → Inspection → Packaging**. [Start with the learning guide](START_HERE.md). Python turns six months of
-machine-shift observations into production, downtime, scrap, cycle-time and OEE analysis.
+machine-shift observations into production, downtime, scrap, cycle-time, and OEE analysis.
 
 **This project uses synthetic data and is inspired by common manufacturing workflows.
-It does not contain confidential company data.** It is an independent portfolio
+It contains no confidential company data.** It is an independent portfolio
 demonstration, not a claim of real plant improvements or past employer deliverables.
 
 ## Business Problem
@@ -30,13 +30,13 @@ Seven notebooks connect each calculation to a business question.
 
 Parallel machines are pooled when screening operation capacity. Machine-shift records
 are independent: the simulator does **not** track the same parts through the process,
-model WIP or enforce transfer balances. Summing all stage outputs does not give shipped units.
+model WIP, or enforce transfer balances. Summing all stage outputs does not give shipped units.
 
 ## Dataset
 
 The default generator uses seed 42, January 1–June 29, 2025 (180 calendar days), three
-shifts and seven machines: **3,780 observations**. It covers Bracket, Housing and Support
-products, setup, downtime, attributed defects, material batch, grade and team.
+shifts and seven machines: **3,780 observations**. It covers Bracket, Housing, and Support
+products, setup, downtime, attributed defects, material batch, grade, and team.
 See [data dictionary](docs/data_dictionary.md) and [simulation design](docs/project_brief.md).
 
 ## Key KPIs
@@ -46,20 +46,20 @@ See [data dictionary](docs/data_dictionary.md) and [simulation design](docs/proj
 | Production attainment | Actual quantity / planned quantity |
 | Scrap rate | Scrap quantity / actual quantity |
 | Availability | Runtime / planned production time |
-| Performance | Ideal production minutes / runtime |
+| Performance | Ideal production minutes/runtime |
 | Quality | Good quantity / actual quantity |
 | OEE | Availability × performance × quality |
 | Cycle time | Actual-unit-weighted seconds per unit |
 | Capacity screen | Good units per scheduled hour, with parallel machines pooled |
 
-[Methodology](docs/methodology.md) defines aggregation, setup losses and interpretation.
+[Methodology](docs/methodology.md) defines aggregation, setup losses, and interpretation.
 
 ## Analysis
 
 1. Understand observation grain and product mix.
-2. Normalize fields and validate time, count and capacity balances.
-3. Compare plan vs actual by day, week, shift, machine and operation.
-4. Identify scrap concentrations by defect, machine, shift and product.
+2. Normalize fields and validate time, count, and capacity balances.
+3. Compare plan vs. actual by day, week, shift, machine, and operation.
+4. Identify scrap concentrations by defect, machine, shift, and product.
 5. Analyze downtime Pareto and machine-level OEE.
 6. Screen operation capacity and cycle-time variability.
 7. Present management findings and recommended investigations.
@@ -117,7 +117,7 @@ Optional notebook environment:
 ```
 To change the simulation, edit `DAYS` and `SEED` near the top of `src/main.py`, then run it again.
 Reports are regenerated. The capacity screen assumes the simulator's 450-minute shift;
-validate that assumption before supplying external data. Publish instructions are in
+Validate that assumption before supplying external data. Publish instructions are in
 [docs/github_setup.md](docs/github_setup.md). Tests and verification details are in
 [docs/validation.md](docs/validation.md).
 
@@ -137,5 +137,5 @@ analysis and predictive maintenance are separate optional projects.
 ## Data Sources
 
 Primary data is generated locally by `src/generate_data.py`.
-No public dataset is merged into this simulated process. See [sources and attribution](docs/data_sources.md).
+This simulated process does not merge any public dataset. See [sources and attribution](docs/data_sources.md).
 MIT license covers this project code and its synthetic data, not third-party datasets.
