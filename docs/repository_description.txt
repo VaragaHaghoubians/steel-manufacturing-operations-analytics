@@ -1,0 +1,1 @@
+Beginner Python project analyzing production, OEE, downtime, scrap and cycle times using synthetic steel manufacturing data.

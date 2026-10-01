@@ -1,0 +1,33 @@
+{
+  "data_type": "synthetic",
+  "seed": 42,
+  "observations": 3780,
+  "date_start": "2025-01-01",
+  "date_end": "2025-06-29",
+  "overall": {
+    "planned_quantity": 2675205,
+    "actual_quantity": 2428894,
+    "good_quantity": 2367560,
+    "scrap_quantity": 61334,
+    "production_attainment": 0.9079281774667736,
+    "scrap_rate": 0.02525182243440842,
+    "planned_production_min": 1701000.0,
+    "runtime_min": 1490996.0,
+    "setup_time_min": 85526.0,
+    "downtime_min": 124478.0,
+    "availability": 0.8765408583186362,
+    "performance": 0.8703095928269872,
+    "quality": 0.9747481775655916,
+    "oee": 0.7435982638168401,
+    "weighted_cycle_time_sec": 36.797409705405016,
+    "actual_units_per_runtime_hour": 97.74247549959892,
+    "good_units_per_planned_machine_hour": 83.51181657848325
+  },
+  "findings": [
+    "Production attainment is 90.8%; aggregate quantities count process-stage completions, not shipped products.",
+    "Machining is the simulated capacity-constraint candidate at 80.6 good units per scheduled hour, with parallel machines pooled.",
+    "WELD_01 has the lowest OEE (66.8%). Check time losses, speed and scrap before deciding why.",
+    "Setup accounts for 40.7% of attributed lost time; the top three categories account for 72.9%.",
+    "The two largest defect categories account for 47.7% of recorded scrap. Shift differences cannot prove a team effect because product mix changes and each team stays on one shift."
+  ]
+}

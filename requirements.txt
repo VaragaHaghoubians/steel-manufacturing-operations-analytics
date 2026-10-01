@@ -1,0 +1,6 @@
+# Main project libraries. No machine learning or database installation needed.
+pandas>=2.2,<4
+numpy>=1.26,<3
+matplotlib>=3.8,<4
+openpyxl>=3.1,<4
+reportlab>=4,<6
